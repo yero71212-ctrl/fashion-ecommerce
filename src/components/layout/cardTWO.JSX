@@ -111,30 +111,27 @@ export default function Cards() {
 
       </div>
 
-      {/* MOVING BAR */}
-      <div className="w-full overflow-hidden bg-red py-5">
-
-        <div className="animate-marquee flex gap-16 whitespace-nowrap w-max">
-
-          {[...Array(8)].map((_, i) => (
-            <h1
-              key={i}
-              className="
-                text-white
-                text-2xl
-                md:text-10xl
-                font-extrabold
-                uppercase
-                tracking-[6px]
-              "
-            >
-              Bold. Modern. Independent.
-            </h1>
-          ))}
-
-        </div>
-
-      </div>
+   {/* MOVING BAR */}
+<div className="w-full overflow-hidden bg-gradient-to-r from-red-500 py-8">
+  <div className="animate-marquee flex gap-20 whitespace-nowrap w-max">
+    {[...Array(8)].map((_, i) => (
+      <h1
+        key={i}
+        className="
+          text-white
+          text-5xl
+          md:text-[140px]
+          font-black
+          uppercase
+          tracking-[10px]
+          leading-none
+        "
+      >
+        Bold. Modern. Independent.
+      </h1>
+    ))}
+  </div>
+</div>
 
     </section>
   );

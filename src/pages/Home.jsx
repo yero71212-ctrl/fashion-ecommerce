@@ -8,6 +8,7 @@ import heroImage from "../assets/hero.png";
 import NewArrivals from "../components/layout/NewArrivals";
 import Premiun from "../components/layout/premiun";
 import CardTWO from "../components/layout/cardTWO";
+import Footer from "../components/layout/footer";
 
 export default function Home() {   
   return (
@@ -303,7 +304,7 @@ export default function Home() {
 </section>
 
 <CardTWO/>
-
+<Footer/>
 
     </div>
   );
