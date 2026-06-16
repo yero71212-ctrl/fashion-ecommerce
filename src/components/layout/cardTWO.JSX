@@ -112,7 +112,7 @@ export default function Cards() {
       </div>
 
    {/* MOVING BAR */}
-<div className="w-full overflow-hidden bg-gradient-to-r from-red-500 py-8">
+<div className="w-full overflow-hidden bg-gradient-to-r from-red-500 to-black py-8">
   <div className="animate-marquee flex gap-20 whitespace-nowrap w-max">
     {[...Array(8)].map((_, i) => (
       <h1

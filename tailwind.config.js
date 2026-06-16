@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        heading: ["Anton", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+        logo: ["Cinzel", "serif"],
+      },
+    },
   },
   plugins: [],
 };

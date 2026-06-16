@@ -5,7 +5,7 @@ import { Search, ShoppingBag, Menu } from "lucide-react";
 import { FiSearch, FiShoppingBag, FiMenu } from "react-icons/fi";
 import { useState } from "react"
 import MobileMenu from "./MobileMenu";
-
+import {Link} from "react-router-dom"
 import { navLinks } from "../../data/navLinks";
 
 export default function Navbar() {
