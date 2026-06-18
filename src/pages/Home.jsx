@@ -8,6 +8,7 @@ import heroImage from "../assets/hero.png";
 import NewArrivals from "../components/layout/NewArrivals";
 import Premiun from "../components/layout/premiun";
 import CardTWO from "../components/layout/cardTWO";
+import MovingBar from "../components/layout/movingBar";
 import Footer from "../components/layout/footer";
 
 export default function Home() {   
@@ -176,7 +177,7 @@ export default function Home() {
 < CardONE/>
 
    {/* Hero Section */}
-<section className="relative w-full h-screen overflow-hidden bg-black">
+<section className="relative w-full  overflow-hidden bg-black">
   
   {/* Background Image */}
   <img
@@ -304,6 +305,7 @@ export default function Home() {
 </section>
 
 <CardTWO/>
+ <MovingBar />
 <Footer/>
 
     </div>

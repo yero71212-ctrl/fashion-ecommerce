@@ -410,7 +410,7 @@ shadow-lg
     {/* SHOP NOW */}
     <div
       className="
-      bg-black/40
+      bg-black/5
 backdrop-blur-sm
 rounded-full
 shadow-lg

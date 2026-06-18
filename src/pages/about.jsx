@@ -5,6 +5,8 @@ import AboutHero from "../components/veilAbout/aboutHero";
 import Philosophy from "../components/veilAbout/philosophy";
 import Values from "../components/veilAbout/values";
 import History from "../components/veilAbout/History";
+import CallTOaction from "../components/veilAbout/callTOaction";
+import Timeline from "../components/veilAbout/timeline";
 
 export default function News() {
   return (
@@ -14,6 +16,8 @@ export default function News() {
         < Philosophy/>
           <Values />
           <History/>
+     <Timeline/>
+          <CallTOaction/>
       <Footer />
     </main>
   );  

@@ -10,8 +10,10 @@ export default {
         heading: ["Anton", "sans-serif"],
         body: ["Inter", "sans-serif"],
         logo: ["Cinzel", "serif"],
+        display: ["Oswald", "sans-serif"],
       },
     },
   },
   plugins: [],
 };
+
