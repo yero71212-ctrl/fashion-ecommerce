@@ -17,7 +17,7 @@ export default function MovingBar() {
       <div className="flex whitespace-nowrap animate-marquee">
         {[...items, ...items].map((text, index) => (
           <div key={index} className="flex items-center flex-shrink-0">
-            <span className="text-white text-5xl font-bold tracking-[0.15em] uppercase">
+            <span className="text-white md:text-5xl text-3xl font-display tracking-[0.15em] uppercase">
               {text}
             </span>
 

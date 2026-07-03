@@ -20,7 +20,7 @@ export default function MobileMenu({isOpen}) {
           <a
             key={link.id}
             href={link.path}
-            className="text-white uppercase tracking-[0.2em] text-sm hover:text-red-500 transition duration-300"
+            className="text-white font-display uppercase tracking-[0.2em] text-sm hover:text-red-500 transition duration-300"
           >
             {link.title}
           </a>

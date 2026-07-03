@@ -5,6 +5,7 @@ import Shopr from "./pages/Shopr";
 import Collecton from "./pages/collectionsPages";
 import NewShop from "./pages/newShop";
 import About from "./pages/about";
+import SearchPage from "./pages/searchPage";
 
 export default function App() {
   return (
@@ -16,11 +17,13 @@ export default function App() {
 
         <Route path="/shop" element={<Shopr />} />
 
-        <Route path="/collections" element={<Collecton />} /> 
+        <Route path="/collections" element={<Collecton />} />
 
         <Route path="/new" element={<NewShop />} />
 
         <Route path="/about" element={<About />} />
+
+        <Route path="/search" element={<SearchPage />} />
       </Routes>
 
     </BrowserRouter>

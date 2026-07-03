@@ -23,12 +23,12 @@ export default function StorySection() {
           <div className="max-w-xl">
             <div  className="flex items-center gap-3 mb-4">
              <div className="w-8 h-[2px] bg-red-600"></div>
-            <p className="text-red-600 uppercase tracking-[4px] text-sm mb-6">
+            <p className="text-red-600 uppercase tracking-[4px] text-xs md:text-sm mb-6">
               Our Story
             </p>
             </div>
 
-            <h1 className="text-2xl sm:text-5xl md:text-5xl font-black leading-tight uppercase">
+            <h1 className="font-display text-5xl sm:text-5xl md:text-6xl font-medium leading-tight uppercase">
               We Don't <br />
               Follow Trends.
             </h1>
@@ -36,9 +36,10 @@ export default function StorySection() {
 
 <h1
   className="
-    text-3xl
-    md:text-5xl
-    font-black
+  font-display 
+    text-5xl
+    md:text-6xl
+    font-medium
     uppercase
     text-transparent
     [-webkit-text-stroke:2px_#991b1b]
@@ -72,7 +73,8 @@ export default function StorySection() {
     text-white
     uppercase
     tracking-[4px]
-    text-sm
+    md:text-sm
+    text-xs
     font-semibold
     bg-transparent
     rounded-full
@@ -106,7 +108,7 @@ export default function StorySection() {
             <div className="flex gap-10 mt-14 border-t border-gray-800 pt-4">
               
               <div>
-                <h2 className="text-red-600 text-2xl font-bold">
+                <h2 className="text-red-600 md:text-2xl text-[17px] font-bold">
                   200+
                 </h2>
                 <p className="text-gray-500 text-xs uppercase">
@@ -115,7 +117,7 @@ export default function StorySection() {
               </div>
 
               <div>
-                <h2 className="text-red-600 text-2xl font-bold">
+                <h2 className="text-red-600 md:text-2xl text-[17px] font-bold">
                   18
                 </h2>
                 <p className="text-gray-500 text-xs uppercase">
@@ -124,7 +126,7 @@ export default function StorySection() {
               </div>
 
               <div>
-                <h2 className="text-red-600 text-3xl font-bold">
+                <h2 className="text-red-600 md:text-3xl text-[17px]  font-bold">
                   4
                 </h2>
                 <p className="text-gray-500 text-xs uppercase">

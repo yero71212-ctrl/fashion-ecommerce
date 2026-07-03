@@ -18,18 +18,15 @@ export default function Home() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="h-screen flex items-center mt-10">
-
-        <div className="max-w-7xl  mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
-
+      <section className="h-screen flex items-center md:mb-20  ">
+        <div className="max-w-7xl  mx-auto px-6 grid grid-cols-2 gap-8 items-center">
           {/* LEFT CONTENT */}
           <div>
-
-            <p className="text-red-500 uppercase tracking-[0.1em] text-xs mb-2">
+            <p className="text-red-500 uppercase tracking-[0.1em] text-xs mt-10 mb-2">
               SS 26 COLLECTION
             </p>
 <div className="relative">
-           <h1 className="text-[1rem] md:text-[3rem] lg:text-[5rem] font-black uppercase leading-[0.9] tracking-[-0.05em] text-white">
+           <h1 className="text-[3rem] md:text-[3rem] lg:text-[5rem] font-black uppercase leading-[0.9] tracking-[-0.05em] text-white">
             DEFINE
            <br />
                <span className="text-transparent stroke-text">
@@ -46,9 +43,9 @@ export default function Home() {
             </p>
 
             <div className="flex gap-3 mt-7">
-              <Button>Shop Collection→</Button>
+              <Button className="md:px-6 py-3 md:text-xs text-[8px] ">Shop Collection→</Button>
 
-              <button className="border border-white/20 px-6 py-3 rounded-full uppercase text-xs tracking-[0.2em]">
+              <button className="border border-white/20 md:px-6 md:py-3 py-2 rounded-full uppercase md:text-xs text-[8px] tracking-[0.2em]">
                 Explore Lookbook
               </button>
             </div> </div>
@@ -59,7 +56,7 @@ export default function Home() {
 
   {/* ITEM */}
   <div>
-    <h2 className="text-3xl font-bold text-white">
+    <h2 className="md:text-3xl font-bold text-white">
       12K+
     </h2>
 
@@ -70,7 +67,7 @@ export default function Home() {
 
   {/* ITEM */}
   <div>
-    <h2 className="text-3xl font-bold text-white">
+    <h2 className="md:text-3xl font-bold text-white">
       SS'26
     </h2>
 
@@ -81,7 +78,7 @@ export default function Home() {
 
   {/* ITEM */}
   <div>
-    <h2 className="text-3xl font-bold text-white">
+    <h2 className="md:text-3xl font-bold text-white">
       48H
     </h2>
 
@@ -92,16 +89,15 @@ export default function Home() {
 
 </div>
 </div>
-
           {/* RIGHT IMAGE */}
 
-<div className="flex justify-center">
+       <div className="flex justify-center ">
   <img
     src={fashionImage}
     alt="fashion"
-    className="h-[700px] object-cover rounded-2xl"
+    className="md:h-[700px] h-[450px] object-cover rounded-2xl"
   />
-</div>
+        </div>  
         </div>
       </section>
 
@@ -127,12 +123,13 @@ export default function Home() {
     {/* TITLE */}
     <h2 className="text-5xl md:text-7xl font-black uppercase leading-[0.9]">
 
-      <span className="text-white block">
+      <span className="text-white block font-display">
         Featured
       </span>
 
       <span
         className="
+        font-display
           text-transparent
           [-webkit-text-stroke:1px_rgba(255,255,255,0.3)]
         "
@@ -174,17 +171,20 @@ export default function Home() {
 
 </div>
 
-< CardONE/>
+ <CardONE/>  
 
    {/* Hero Section */}
-<section className="relative w-full  overflow-hidden bg-black">
+<section className="relative min-w-full h-[680px]  overflow-hidden bg-black md:mb-0 mb-0">
   
   {/* Background Image */}
   <img
     src={heroImage}
     alt="Fashion Hero"
-    className="absolute inset-0 w-full h-full object-cover opacity-70"
+    className="absolute inset-0 md:w-full md:h-full object-cover opacity-70 "
+    
   />
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
 
   {/* Dark Overlay */}
   <div className="absolute inset-0 "></div>
@@ -255,24 +255,22 @@ export default function Home() {
           
           {/* VISUAL */}
           <span className="
+            font-display
             block
-            text-[30px]
-            sm:text-[30px]
-            md:text-[30px]
-            lg:text-[50px]
+            text-[50px]
+            lg:text-[60px]
           ">
             VISUAL
           </span>
 
           {/* CULTURE */}
           <span className="
+          font-display
             block
             text-transparent
             stroke-text
-             text-[30px]
-            sm:text-[30px]
-            md:text-[30px]
-            lg:text-[50px]
+            text-[40px]
+            lg:text-[60px]
           ">
             CULTURE
           </span>
@@ -282,7 +280,7 @@ export default function Home() {
 
       {/* Right Side */}
       <div className="max-w-md text-left lg:text-right">
-        <p className="text-gray-400 text-sm md:text-base leading-7">
+        <p className="text-gray-400  md:text-base leading-7">
           Tag us in your fits. Join a community that <br /> moves culture
           forward, not just fashion.
         </p>

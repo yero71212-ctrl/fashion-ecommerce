@@ -14,7 +14,7 @@ export default function Footer() {
 
           {/* BRAND */}
           <div>
-            <h1 className="text-5xl font-black tracking-[0.5em]">
+            <h1 className=" font-display md:text-5xl text-3xl font-black tracking-[0.5em]">
               VEIL
             </h1>
 

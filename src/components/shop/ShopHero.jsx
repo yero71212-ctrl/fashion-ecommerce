@@ -1,17 +1,17 @@
 //shopHero
 export default function ShopHero() {
   return (
-    <section className="relative overflow-hidden bg-black">
+    <section className="relative overflow-hidden bg-black  mt-5">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1a0000] via-[#220000] to-black opacity-95" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1a0000] via-[#220000] to-black opacity-95 " />
 
       {/* Content */}
-      <div className="relative px-6 md:px-16 py-24 md:py-36">
+      <div className="relative px-3 md:px-13 py-24 md:py-33">
         {/* Small Label */}
-        <div className="flex items-center gap-3 mb-6">
+        <div className="flex items-center gap-3 mb-3 mt-6">
           <span className="w-8 h-[2px] bg-red-600"></span>
 
-          <p className="uppercase tracking-[5px] text-red-500 text-xs md:text-sm">
+          <p className="uppercase tracking-[5px] text-red-500 text-sm md:text-sm">
             All Products
           </p>
         </div>

@@ -52,11 +52,12 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
 
           {/* SEARCH */}
+          <Link to="/search">
           <button
             className="
               flex items-center justify-center
-              w-11 h-11
-              rounded-full
+               md:w-11 md:h-11
+              w-8 h-8   rounded-full
               border border-white/10
               bg-white/5
               backdrop-blur-md
@@ -67,7 +68,7 @@ export default function Navbar() {
           >
             <Search size={18} className="text-white" />
           </button>
-
+            </Link>
         </div>
 
         {/* RIGHT */}
@@ -78,7 +79,8 @@ export default function Navbar() {
             className="
               relative
               flex items-center justify-center
-              w-11 h-11
+              md:w-11 md:h-11
+              w-8 h-8
               rounded-full
               border border-white/10
               bg-white/5
@@ -94,7 +96,7 @@ export default function Navbar() {
             <span
               className="
                 absolute -top-1 -right-1
-                w-5 h-5
+                w-4 h-4
                 rounded-full
                 bg-red-600
                 text-[10px]
@@ -110,15 +112,12 @@ export default function Navbar() {
           {/* MENU */}
          <button
   onClick={() => setMenuOpen(!menuOpen)}
-  className="md:hidden text-white text-xl"
+  className=" text-white text-xl"
 >
   <FiMenu />
 </button>
         </div>
-
       </div>
-
-
         </nav>
       </Container>
 <MobileMenu isOpen={menuOpen} />

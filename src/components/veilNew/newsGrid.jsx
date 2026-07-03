@@ -123,17 +123,6 @@ export default function newsGrid() {
       </div>
     </section>
 
-
-
-
-
-
-
-
- 
-
-   
-
     </div>
   );
 }

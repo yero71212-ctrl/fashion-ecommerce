@@ -67,23 +67,24 @@ export default function NewArrivals() {
   };
 
   return (
-    <section className="bg-black text-white py-24 px-6 lg:px-16 overflow-hidden">
+    <section className="bg-black text-white py-24 px-6 lg:px-16 overflow-hidden md:mt-0 mt-0">
 
       {/* Top */}
       <div className="flex items-center justify-between mb-14">
 
         {/* Left */}
         <div>
-          <p className="text-red-600 uppercase tracking-[0.3em] text-sm mb-4">
+          <p className="text-red-600 uppercase tracking-[0.3em] md:text-sm text-xs mb-4">
             — Just Dropped
           </p>
 
-          <h2 className="text-5xl md:text-7xl font-black uppercase leading-none">
+          <h2 className="font-display text-4xl md:text-6xl font-black uppercase leading-none">
             New
           </h2>
 
-          <h2 className="text-5xl md:text-7xl font-black uppercase leading-none text-transparent stroke-text">
+          <h2 className="font-display text-5xl md:text-6xl font-black uppercase leading-none text-transparent stroke-text">
             Arrivals
+
           </h2>
         </div>
 
@@ -112,7 +113,7 @@ export default function NewArrivals() {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
 
         {visibleProducts.map((product) => (
           <div
@@ -122,11 +123,11 @@ export default function NewArrivals() {
 
             {/* Image */}
             <div className="relative overflow-hidden bg-[#111]">
-
+               
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-[420px] object-cover group-hover:scale-105 transition duration-500"
+                className="md:w-full md:h-[420px] object-cover group-hover:scale-105 transition duration-500"
               />
 
               {/* Badge */}
@@ -135,7 +136,9 @@ export default function NewArrivals() {
               </span>
 
               {/* Hover Button */}
-              <button className="absolute bottom-5 left-1/2 -translate-x-1/2 bg-red-600 px-3 py-1 rounded-full text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition duration-300">
+              <button className="absolute bottom-5 left-1/2 -translate-x-1/2
+               bg-red-600 md:px-3 px-1 py-1 rounded-full text-xs uppercase 
+              tracking-widest opacity-0 group-hover:opacity-100 transition duration-300">
                 + Quick Add
               </button>
             </div>
@@ -156,6 +159,7 @@ export default function NewArrivals() {
               <p className="text-red-500 text-sm font-semibold">
                 {product.price}
               </p>
+             
             </div>
 
           </div>
