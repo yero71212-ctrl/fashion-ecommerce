@@ -18,11 +18,11 @@ export default function AboutHero() {
           </p>
 
           <h1 className="leading-none">
-            <span className="block text-white text-6xl md:text-9xl font-black">
+            <span className=" font-display block text-white text-6xl md:text-9xl font-black">
               WE ARE
             </span>
 
-            <span className="block text-transparent text-6xl md:text-9xl font-black stroke-text">
+            <span className="font-display block text-transparent text-6xl md:text-9xl font-black stroke-text">
               VEIL
             </span>
           </h1>

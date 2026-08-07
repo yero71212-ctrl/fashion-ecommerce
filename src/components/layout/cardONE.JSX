@@ -1,9 +1,16 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import fashionBag from "../../assets/c4.png";
 import fashionShoe from "../../assets/c3.png";
 import fashionJacket from "../../assets/c1.png";
 import fashionHodye from "../../assets/c2.png";
 
+import { useCart } from "../../context/CartContext";
+
 export default function CardONE() {
+  const [activeCard, setActiveCard] = useState(null);
+  const { addToCart } = useCart();
   const products = [
     {
       id: 1,
@@ -55,13 +62,14 @@ export default function CardONE() {
           >
             {/* Image */}
             <div className="relative overflow-hidden ">
+            <Link to={`/product/${item.id}`}>
               <img
                 src={item.image}
                 alt={item.name}
                 className="md:w-full md:h-[420px] object-cover transition-transform 
                 duration-500 group-hover:scale-110"
               />
-
+            </Link>
               {/* Badge */}
               <span className="absolute top-4 left-4 bg-red-600
                text-white text-[10px] px-3 py-1 uppercase tracking-[2px]">
@@ -74,8 +82,9 @@ export default function CardONE() {
                 {item.category}
               </span>
 
+              
               {/* Quick Add */}
-              <button
+              {/* <button
                 className=" 
 absolute bottom-5 left-1/2 -translate-x-1/2
                bg-red-600 px-3 py-1 rounded-full text-xs uppercase 
@@ -83,7 +92,39 @@ absolute bottom-5 left-1/2 -translate-x-1/2
               >
                
                 + QUICK ADD
-              </button>
+              </button> */}
+      
+<div className="absolute bottom-5 left-1/2 -translate-x-1/2">
+
+  {activeCard === item.id ? (
+    <div className="flex gap-1 bg-black/90 p-2 rounded-full">
+      {["XS", "S", "M", "L", "XL"].map((size) => (
+        <button
+  key={size}
+  onClick={() => {
+    addToCart(item, size);
+    setActiveCard(null);
+  }}
+  className="w-8 h-8 rounded-full border border-red-500 text-white text-[10px] hover:bg-red-600 transition"
+>
+  {size}
+</button>
+      ))}
+    </div>
+  ) : (
+    <button
+      onClick={() => setActiveCard(item.id)}
+      className="bg-red-600 px-4 py-2 rounded-full text-xs uppercase tracking-widest
+      opacity-0 group-hover:opacity-100 transition"
+    >
+      + QUICK ADD
+    </button>
+  )}
+
+</div>
+
+
+
             </div>
 
             {/* Bottom */}

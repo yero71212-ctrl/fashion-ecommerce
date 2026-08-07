@@ -10,24 +10,24 @@ export default function Philosophy() {
         <div className="flex items-center px-10 lg:px-24 py-24 mt-20">
           <div>
             <h2 className="leading-none mb-10">
-              <span className="block text-white text-3xl md:text-5xl font-black">
+              <span className="block text-white text-4xl md:text-5xl font-black">
                 FASHION AS
               </span>
 
-              <span className="block text-transparent stroke-text text-3xl md:text-5xl font-black">
+              <span className="block text-transparent stroke-text text-4xl md:text-5xl font-black">
                 PHILOSOPHY
               </span>
             </h2>
 
             <div className="w-7 h-[3px] bg-red-600 mb-10" />
 
-            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+            <p className="text-gray-400 md:text-lg leading-relaxed mb-8">
               VEIL was never meant to be a brand. It began as a question:
               what does clothing look like when it refuses to perform
               for an audience?
             </p>
 
-            <p className="text-gray-400 text-lg leading-relaxed">
+            <p className="text-gray-400 md:text-lg leading-relaxed">
               Seven years later, that question has become a global
               community of people who dress for themselves.
             </p>

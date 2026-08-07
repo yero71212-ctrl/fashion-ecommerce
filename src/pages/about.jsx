@@ -16,7 +16,7 @@ export default function News() {
         < Philosophy/>
           <Values />
           <History/>
-     <Timeline/>
+          <Timeline/> 
           <CallTOaction/>
       <Footer />
     </main>

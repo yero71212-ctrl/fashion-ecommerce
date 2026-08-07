@@ -10,7 +10,7 @@ export default function CollectionFilter() {
   const [activeCollection, setActiveCollection] = useState("ALL");
   const [activeCategory, setActiveCategory] = useState("ALL");
   const [sort, setSort] = useState("Featured");
-
+  const [activeCard, setActiveCard] = useState(null);
   const collections = [
     { name: "ALL", count: 15 },
     { name: "SS26", count: 6 },
@@ -101,6 +101,79 @@ export default function CollectionFilter() {
     collection: "ARCHIVE",
     category: "ACCESSORIES",
   },
+  {
+    id: 9,
+    image: product1,
+    badge: "BESTSELLER",
+    name: "Shadow Oversized Jacket",
+    price: "$248",
+    oldPrice: "$310",
+    collection: "SS26",
+    category: "OUTERWEAR",
+  },
+  {
+    id: 10,
+    image: product2,
+    badge: "NEW",
+    name: "Void Tactical Hoodie",
+    price: "$165",
+    collection: "SS26",
+    category: "TOPS",
+  },
+  {
+    id: 11,
+    image: product3,
+    badge: "EXCLUSIVE",
+    name: "Ember Low Sneaker",
+    price: "$289",
+    collection: "FW25",
+    category: "FOOTWEAR",
+  },
+  {
+    id: 12,
+    image: product4,
+    badge: "LIMITED",
+    name: "Leather Crossbody Bag",
+    price: "$198",
+    collection: "ARCHIVE",
+    category: "ACCESSORIES",
+  },
+  {
+    id: 13,
+    image: product1,
+    badge: "NEW",
+    name: "Shadow Oversized Jacket",
+    price: "$248",
+    collection: "RESORT",
+    category: "OUTERWEAR",
+  },
+  {
+    id: 14,
+    image: product2,
+    badge: "NEW",
+    name: "Void Tactical Hoodie",
+    price: "$165",
+    collection: "SS26",
+    category: "TOPS",
+  },
+  {
+    id: 15,
+    image: product3,
+    badge: "EXCLUSIVE",
+    name: "Ember Low Sneaker",
+    price: "$289",
+    collection: "FW25",
+    category: "FOOTWEAR",
+  },
+  {
+    id: 16,
+    image: product4,
+    badge: "LIMITED",
+    name: "Leather Crossbody Bag",
+    price: "$198",
+    collection: "ARCHIVE",
+    category: "ACCESSORIES",
+  },
 ];
    
  const filteredProducts = products
@@ -147,7 +220,7 @@ export default function CollectionFilter() {
           <button
             key={item.name}
             onClick={() => setActiveCollection(item.name)}
-            className={`flex items-center gap-4 px-3 py-2 rounded-lg border transition-all duration-300 
+            className={`flex items-center gap-4 px-1 md:px-3 md:py-2 rounded-lg border transition-all duration-300 
               ${
                 activeCollection === item.name
                   ? "border-red-500 text-white bg-red-500/20"
@@ -157,7 +230,7 @@ export default function CollectionFilter() {
             <span className="text-[13px]">{item.name}</span>
 
             <span
-              className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px]
+              className={`w-6 md:h-6 rounded-full flex items-center justify-center text-[10px]
                 ${
                   activeCollection === item.name
                     ? "bg-red-500/40 border border-red-500 text-red-500 "
@@ -177,7 +250,7 @@ export default function CollectionFilter() {
             <button
               key={item}
               onClick={() => setActiveCategory(item)}
-              className={`px-5 py-2 rounded-full border text-sm tracking-wider transition
+              className={`px-2 md:px-5 md:py-2 rounded-full border text-sm tracking-wider transition
                 ${
                   activeCategory === item
                     ? "bg-red-500 border-red-500 text-white text-sm"
@@ -206,7 +279,7 @@ export default function CollectionFilter() {
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value)}
-            className="bg-black border border-zinc-800 px-3 py-2 rounded-lg outline-none"
+            className="bg-black border border-zinc-800 md:px-3 md:py-2 rounded-lg outline-none"
           >
             <option>Featured</option>
             <option>Price: Low to High</option>
@@ -242,7 +315,7 @@ export default function CollectionFilter() {
 
 
 {/* Products */}
-<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
   {filteredProducts.map((item) => (
     <div
       key={item.id}
@@ -262,13 +335,34 @@ export default function CollectionFilter() {
         {item.price}
       </span>
 
-      <button
-        className="absolute left-1/2 -translate-x-1/2 bottom-28 bg-red-600 text-white
-        px-6 py-2 rounded-full text-xs tracking-wider opacity-0 translate-y-6
+      
+       {/* Quick Add */}
+             <div className="absolute bottom-5 left-1/2 -translate-x-1/2">
+
+  {activeCard === item.id ? (
+    <div className="flex gap-1 bg-black/90 p-2 rounded-full">
+      {["XS", "S", "M", "L", "XL"].map((size) => (
+        <button
+          key={size}
+          className="w-8 h-8 rounded-full border border-red-500 text-white text-[10px]
+          hover:bg-red-600 transition"
+        >
+          {size}
+        </button>
+      ))}
+    </div>
+  ) : (
+    <button
+      onClick={() => setActiveCard(item.id)}
+     className="absolute left-1/2 -translate-x-1/2 bottom-28 bg-red-600 text-white
+        px-2 md:px-6 md:py-2 rounded-full text-xs tracking-wider opacity-0 translate-y-6
         group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 mb-4"
       >
-        + QUICK ADD
-      </button>
+      + QUICK ADD
+    </button>
+  )}
+
+</div>
 
       <div className="absolute bottom-0 left-0 right-0 bg-[#180404]/95 p-2 ">
         <h3 className="text-white font-medium mt-2">

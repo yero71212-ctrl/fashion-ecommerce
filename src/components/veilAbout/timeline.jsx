@@ -50,16 +50,16 @@ export default function Timeline() {
             <div className="absolute left-1/2 top-10 -translate-x-1/2 w-3 h-3 rounded-full bg-zinc-400 border-4 border-black z-10"></div>
 
             {/* Card */}
-            <div className="w-full md:w-[47%]  bg-red-900/15 p-8 shadow-[0_0_30px_rgba(255,0,0,0.08)]">
-              <h2 className="text-red-600 text-3xl font-bold tracking-wider mb-4">
+            <div className="w-[47%]  bg-red-900/15 p-8 shadow-[0_0_30px_rgba(255,0,0,0.08)]">
+              <h2 className="text-red-600 text-2xl md:text-3xl font-bold tracking-wider mb-4">
                 {item.year}
               </h2>
 
-              <h3 className="text-white text-2xl font-semibold mb-3">
+              <h3 className="text-white text-1xl md:text-2xl font-semibold mb-3">
                 {item.title}
               </h3>
 
-              <p className="text-zinc-400 leading-relaxed">
+              <p className="text-zinc-400 text-1xl leading-relaxed">
                 {item.desc}
               </p>
             </div>

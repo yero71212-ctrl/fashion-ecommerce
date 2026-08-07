@@ -8,8 +8,23 @@ import MobileMenu from "./MobileMenu";
 import {Link} from "react-router-dom"
 import { navLinks } from "../../data/navLinks";
 
+import { useCart } from "../../context/CartContext";
+import CartDrawer from "../CartDrawer";
+
+
 export default function Navbar() {
    const [menuOpen, setMenuOpen] = useState(false)
+   
+   const {
+  cartItems,
+  cartOpen,
+  setCartOpen,
+   } = useCart()
+
+    const totalItems = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+    );
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
          
@@ -44,7 +59,7 @@ export default function Navbar() {
           {/* LOGO */}
 
           <Logo />
-          <MobileMenu />
+          
 
           <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between mr-px">
 
@@ -76,6 +91,7 @@ export default function Navbar() {
 
           {/* SHOPPING BAG */}
           <button
+            onClick={() => setCartOpen(true)}
             className="
               relative
               flex items-center justify-center
@@ -105,7 +121,8 @@ export default function Navbar() {
                 text-white
               "
             >
-              4
+              {totalItems}
+            {/* {cartItems.length} */}
             </span>
           </button>
 
@@ -121,6 +138,10 @@ export default function Navbar() {
         </nav>
       </Container>
 <MobileMenu isOpen={menuOpen} />
+<CartDrawer
+open={cartOpen}
+setOpen={setCartOpen}
+/>
     </header>
   );
 }

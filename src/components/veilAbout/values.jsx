@@ -33,7 +33,7 @@ export default function Values() {
           OUR VALUES
         </h2>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {values.map((item) => (
             
             <div

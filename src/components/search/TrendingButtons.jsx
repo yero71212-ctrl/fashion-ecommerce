@@ -12,7 +12,7 @@ export default function TrendingButtons({
 }) {
   return (
     <div className="flex items-center gap-2 flex-wrap">
-        <h2 className="text-xs tracking-[4px] text-zinc-500 uppercase">
+        <h2 className="text-[10px] md:text-xs tracking-[4px] text-zinc-500 uppercase">
          TRENDING
         </h2>
       {categories.map((category) => (
@@ -24,7 +24,8 @@ export default function TrendingButtons({
             px-4
             py-1
             rounded-full
-            text-[11px]
+            text-[8px]
+            md:text-[11px]
             tracking-[2px]
             uppercase
             border

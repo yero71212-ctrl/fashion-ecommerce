@@ -7,7 +7,7 @@ export default function JoinCollective() {
 
       <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
         
-        <h2 className="font-heading text-white text-5xl md:text-6xl font-bold uppercase tracking-[8px] mb-10">
+        <h2 className="font-display text-white text-5xl md:text-6xl font-bold uppercase tracking-[8px] mb-10">
           JOIN THE COLLECTIVE
         </h2>
 

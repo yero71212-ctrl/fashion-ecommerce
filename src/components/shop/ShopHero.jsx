@@ -17,7 +17,7 @@ export default function ShopHero() {
         </div>
 
         {/* Title */}
-        <h1 className="text-white text-5xl sm:text-6xl md:text-8xl font-extrabold uppercase leading-none tracking-tight">
+        <h1 className="text-white text-6xl sm:text-6xl md:text-8xl font-extrabold uppercase leading-none tracking-tight">
           THE SHOP
         </h1>
 

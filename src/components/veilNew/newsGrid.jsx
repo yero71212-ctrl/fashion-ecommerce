@@ -6,7 +6,7 @@ export default function newsGrid() {
   return (
     <div>
 
-<section className="w-full bg-black text-white overflow-hidden">
+<section className="w-full bg-black text-white overflow-hidden md:mt-0 mt-10">
   <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-32">
     
     {/* Top Text */}
@@ -24,9 +24,7 @@ export default function newsGrid() {
           {/* VISUAL */}
           <span className="
             block
-            text-[30px]
-            sm:text-[30px]
-            md:text-[30px]
+           text-[40px]
             lg:text-[50px]
           ">
            NEWS &
@@ -37,9 +35,7 @@ export default function newsGrid() {
             block
             text-transparent
             stroke-text
-             text-[30px]
-            sm:text-[30px]
-            md:text-[30px]
+            text-[40px]
             lg:text-[50px]
           ">
            EDITORIALS

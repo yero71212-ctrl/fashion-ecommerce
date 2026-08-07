@@ -4,7 +4,7 @@ import SearchSuggestions from "../components/search/SearchSuggestions";
 import SearchCard from "../components/search/searchCard";
 import TrendingButtons from "../components/Search/TrendingButtons";
 
-import products from "../data/products";
+import products  from "../data/products";
 import Footer from "../components/layout/Footer";
 
 export default function SearchPage() {
@@ -50,7 +50,7 @@ const filteredProducts = products.filter((item) => {
 
         </div>
  <div className="flex justify-between items-center mt-3">
-        <h2 className="text-xs tracking-[4px] text-zinc-500 uppercase">
+        <h2 className="text-[0px] md:text-xs tracking-[4px] text-zinc-500 uppercase">
           All Products
         </h2>
 

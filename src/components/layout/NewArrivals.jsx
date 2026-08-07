@@ -46,7 +46,8 @@ const products = [
 ];
 
 export default function NewArrivals() {
-
+   
+const [activeCard, setActiveCard] = useState(null);
   const [startIndex, setStartIndex] = useState(0);
 
   // 4 cards only
@@ -136,11 +137,32 @@ export default function NewArrivals() {
               </span>
 
               {/* Hover Button */}
-              <button className="absolute bottom-5 left-1/2 -translate-x-1/2
-               bg-red-600 md:px-3 px-1 py-1 rounded-full text-xs uppercase 
-              tracking-widest opacity-0 group-hover:opacity-100 transition duration-300">
-                + Quick Add
-              </button>
+                 {/* Quick Add */}
+            <div className="absolute bottom-5 left-1/2 -translate-x-1/2">
+
+  {activeCard === product.id ? (
+    <div className="flex gap-1 bg-black/90 p-2 rounded-full">
+      {["XS", "S", "M", "L", "XL"].map((size) => (
+        <button
+          key={size}
+          className="w-8 h-8 rounded-full border border-red-500 text-white text-[10px]
+          hover:bg-red-600 transition"
+        >
+          {size}
+        </button>
+      ))}
+    </div>
+  ) : (
+    <button
+      onClick={() => setActiveCard(product.id)}
+      className="bg-red-600 px-4 py-2 rounded-full text-xs uppercase tracking-widest
+      opacity-0 group-hover:opacity-100 transition"
+    >
+      + QUICK ADD
+    </button>
+  )}
+
+</div>
             </div>
 
             {/* Info */}

@@ -86,7 +86,7 @@ export default function News() {
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
-            className={`px-6 py-3 rounded-full border uppercase tracking-[3px] text-xs transition-all duration-300
+            className={`px-2 md:px-6 py-1 md:py-3 rounded-full border uppercase tracking-[3px] text-xs transition-all duration-300
             ${
               activeCategory === category
                 ? "bg-red-600 border-red-600 text-white"
@@ -111,7 +111,7 @@ export default function News() {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-[420px] object-cover transition duration-700 group-hover:scale-105"
+                className="w-full  md:h-[420px] object-cover transition duration-700 group-hover:scale-105"
               />
             </div>
 
@@ -127,7 +127,7 @@ export default function News() {
                 </span>
               </div>
 
-              <h2 className="text-white text-3xl font-bold leading-tight uppercase mb-4">
+              <h2 className="text-white md:text-3xl font-bold leading-tight uppercase mb-4">
                 {item.title}
               </h2>
 
